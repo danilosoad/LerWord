@@ -12,10 +12,11 @@ namespace LerWord
     {
         public static void Main(string[] args)
         {
-            //caminho do arquivo
+            //nome do arquivo
+            string fileName = "teste";
 
-            string path = @"C:\Users\shymm\OneDrive\Área de Trabalho\teste.docx";
-            //string path = @"C:\Users\shymm\OneDrive\Área de Trabalho\teste.html";
+            //caminho do arquivo
+            string path = string.Format(@"C:\Users\shymm\OneDrive\Área de Trabalho\{0}.docx", fileName);
 
             var leitura = new MetodosWord();
 
@@ -32,7 +33,7 @@ namespace LerWord
 
             Console.WriteLine("Convertendo arquivo docx para HTMl..");
 
-            leitura.WordToHtml(path);
+            leitura.WordToHtml(path, fileName);
             Console.ReadKey();
 
         }

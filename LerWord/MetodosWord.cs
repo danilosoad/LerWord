@@ -85,9 +85,9 @@ namespace LerWord
             return totaltext;
         }
 
-        public void WordToHtml(string path)
+        public void WordToHtml(string path, string fileName)
         {
-            object TargetPath = @"C:\Users\shymm\OneDrive\Área de Trabalho\testeConvertido";
+            object TargetPath = string.Format(@"C:\Users\shymm\OneDrive\Área de Trabalho\{0}",fileName);
             object miss = System.Reflection.Missing.Value;
 
             object readOnly = true;
